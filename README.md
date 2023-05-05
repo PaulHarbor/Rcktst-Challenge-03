@@ -10,6 +10,6 @@ Regras de Negócio
 [x] obrigatório informar cidade para listar os pets
 [x] uma ORG precisa ter um endereço e um telefone
 [x] um pet deve estar ligado a uma ORG
-[] para adotar, contactar ORG via whatsapp
+[x] para adotar, contactar ORG via whatsapp
 [x] exceto cidade, os outros filtros são opcionais
 [x] pra ORG acessar como admin, precisa estar logada
