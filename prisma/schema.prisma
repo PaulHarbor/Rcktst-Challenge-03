@@ -57,7 +57,7 @@ model Pet {
   description  String?
 
   org    Org    @relation(fields: [org_id], references: [id])
-  org_id String @map("org_id")
+  org_id String //@map("orgId")
 
   @@map("pets")
 }

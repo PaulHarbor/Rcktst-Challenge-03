@@ -6,13 +6,12 @@ await req.jwtVerify({ onlyCookie: true })
 
 console.log('JWT verified for Org')
 
-  const { role } = req.org
-
+  const { role } = req.user
   const token = await rep.jwtSign(
     { role },
     {
       sign: {
-        sub: req.org.sub
+        sub: req.user.sub
       }
     })
 
@@ -20,13 +19,13 @@ console.log('JWT verified for Org')
     { role  },
     {
       sign: {
-        sub: req.org.sub,
+        sub: req.user.sub,
         expiresIn: '7d'
       }
     })
 
     return rep
-      .setCookie('orgRefreshToken', refreshToken,{
+      .setCookie('refreshToken', refreshToken,{
         path:'/',
         secure:true,
         sameSite:true,

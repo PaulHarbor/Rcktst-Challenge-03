@@ -39,7 +39,7 @@ export async function authenticateOrg(req: FastifyRequest, rep: FastifyReply) {
       })
 
     return rep
-      .setCookie('orgRefreshToken', refreshToken, {
+      .setCookie('refreshToken', refreshToken, {
         path: '/',
         secure: true,
         sameSite: true,

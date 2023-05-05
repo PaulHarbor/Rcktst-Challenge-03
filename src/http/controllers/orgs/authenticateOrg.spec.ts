@@ -28,7 +28,7 @@ describe('Authenticate Org (e2e)', () => {
         phone: '9999-9999'
       })
 
-    console.log('Created Org : ', createdOrg.statusCode)
+    //console.log('Created Org : ', createdOrg.statusCode)
 
     const response = await request(app.server)
       .post('/orgs/sessions')
@@ -38,7 +38,7 @@ describe('Authenticate Org (e2e)', () => {
         password: '123456'
       })
     
-    console.log('Org Auth : ', response.body)
+    //console.log('Org Auth : ', response.body)
 
     expect(response.statusCode).toEqual(200)
     expect(response.body).toEqual({
